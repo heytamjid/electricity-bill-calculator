@@ -3,43 +3,39 @@
 
 float bill (float unit)
 {
+    float a=4.40, b=6.01, c=6.30, d=6.66, e=10.44, f=12.03;
     float primary_bill;
     if (unit <=75)
     {
-        primary_bill = unit*4.19;
+        primary_bill = unit*a;
     }
 
     else if (unit <= 200)
     {
-        primary_bill = (75*4.19 + (unit-75)*5.72 );
+        primary_bill = (75*a + (unit-75)*b );
     }
 
     else if (unit <=300)
     {
-        primary_bill = (75*4.19 + 125*5.72 + (unit-200)*6.00 );
+        primary_bill = (75*a + 125*b + (unit-200)*c );
     }
 
     else if (unit <=400)
     {
-        primary_bill = (75*4.19 + 125*5.72 + 100*6.00 + (unit-300)*6.34 );
-    }
-
-    else if (unit <=400)
-    {
-        primary_bill = (75*4.19 + 125*5.72 + 100*6.00 + (unit-300)*6.34 );
+        primary_bill = (75*a + 125*b + 100*c + (unit-300)*d );
     }
 
     else if (unit <=600)
     {
-        primary_bill = (75*4.19 + 125*5.72 + 100*6.00 + 100*6.34 + (unit-400)*9.94 );
+        primary_bill = (75*a + 125*b + 100*c + 100*d + (unit-400)*e );
     }
 
     else 
     {
-        primary_bill = (75*4.19 + 125*5.72 + 100*6.00 + 100*6.34 + 200*9.94 + (unit-600)*11.46 );
+        primary_bill = (75*a + 125*b + 100*c + 100*d + 200*e + (unit-600)*f );
     }
 
-    float secondary_bill=primary_bill+60;
+    float secondary_bill=primary_bill+70;
     float tertiary_bill = secondary_bill+secondary_bill*0.05;
     float final_bill = tertiary_bill + tertiary_bill*0.01;  //for bkash payment
 
