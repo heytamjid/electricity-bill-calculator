@@ -3,7 +3,7 @@
 
 float bill (float unit)
 {
-    float a=4.40, b=6.01, c=6.30, d=6.66, e=10.44, f=12.03;
+    float a=4.85, b=6.63, c=6.95, d=7.34, e=11.51, f=13.26;
     float primary_bill;
     if (unit <=75)
     {
